@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Api from './redux/action/Api';
+
+import Employee from './Components/Employee';
+import { Routes,Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <Employee /> */}
+     <Routes>
+       <Route path ="/api" element={<Api/>} />
+       <Route path ="/" element={<Employee/>} />
+     </Routes>
     </div>
   );
 }
